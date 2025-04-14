@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Prevent scrolling when menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -22,6 +21,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16 px-4 sm:px-6">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
+            <img className='w-10 rounded-full h-9' src='/logo.png' />
               <span className="text-2xl font-bold text-purple-600">Grow-Key</span>
             </Link>
           </div>
